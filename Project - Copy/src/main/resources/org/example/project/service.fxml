@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.web.WebView?>
+
+
+<AnchorPane prefHeight="519.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project.ServiceController">
+   <children>
+      <Pane prefHeight="519.0" prefWidth="795.0" styleClass="pane_111">
+         <stylesheets>
+            <URL value="@style.css" />
+            <URL value="@dashboard.css" />
+         </stylesheets>
+         <children>
+            <Button layoutX="316.0" layoutY="205.0" mnemonicParsing="false" onAction="#to_other" prefHeight="29.0" prefWidth="163.0" styleClass="pane_11" text="Other ">
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@dashboard.css" />
+               </stylesheets>
+            </Button>
+            <Button layoutX="210.0" layoutY="135.0" mnemonicParsing="false" onAction="#to_emergency" prefHeight="29.0" prefWidth="163.0" styleClass="pane_11" text="Emergency Service">
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@dashboard.css" />
+               </stylesheets>
+            </Button>
+            <Button layoutX="410.0" layoutY="135.0" mnemonicParsing="false" onAction="#to_car_rent" prefHeight="29.0" prefWidth="163.0" styleClass="pane_11" text="Car Rent">
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@dashboard.css" />
+               </stylesheets>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="emergency_pane" prefHeight="519.0" prefWidth="795.0" visible="false">
+         <children>
+            <WebView fx:id="webview" prefHeight="519.0" prefWidth="795.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="car_rent_pane" prefHeight="519.0" prefWidth="795.0" visible="false" />
+      <Pane fx:id="other_pane" prefHeight="519.0" prefWidth="795.0" visible="false" />
+   </children>
+</AnchorPane>

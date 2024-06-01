@@ -1,0 +1,45 @@
+#service-buttons {position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); text-align: center;
+            
+    background-color: #31363F; 
+    border-width: 2px 2px 2px 2px;
+    border-radius: 16px;         
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+#service-buttons button {margin: 5px;}
+#service-buttons button:hover {
+    cursor: pointer;
+}
+.map-button:hover, .service-button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+.map-button:active, .service-button:active {
+    background-color: #3e8e41;
+}
+
+.button:hover {
+    -fx-background-color: #E5E5E5;
+    -fx-text-fill: #000;
+}
+
+.button:pressed {
+    -fx-background-color: #E5E5E5;
+    -fx-text-fill: #364FCD;
+}
+
+.button:focused {
+    -fx-background-color: #D9D9D9;
+    -fx-text-fill: #364FCD;
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+.gradiant-bg{
+    -fx-background-color: linear-gradient(to bottom right, #cbb6e6, #0095b4);
+}

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project.HelloController">
+   <children>
+      <AnchorPane fx:id="welcome" prefHeight="200.0" prefWidth="200.0" styleClass="pane_111">
+         <children>
+            <Button alignment="CENTER" layoutX="40.0" layoutY="344.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="btn" text="Consumer" textAlignment="CENTER">
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@dashboard.css" />
+               </stylesheets></Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="88.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="114.0" layoutY="189.0" text="Welcome to ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.11848341232227488" startY="0.41232227488151657">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8196078538894653" green="0.9058823585510254" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7921568751335144" green="0.8941176533699036" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="76.0" layoutY="300.0" text="Please choose your category">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8196078538894653" green="0.9058823585510254" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7921568751335144" green="0.8941176533699036" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="94.0" layoutY="216.0" text="Daily Needs" textFill="#91cadb">
+               <font>
+                  <Font name="Dancing Script SemiBold" size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="provider_btn" alignment="CENTER" layoutX="186.0" layoutY="344.0" mnemonicParsing="false" onAction="#goto_mainform1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="btn" text="Provider" textAlignment="CENTER">
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@dashboard.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="customer_btn" alignment="CENTER" layoutX="40.0" layoutY="344.0" mnemonicParsing="false" onAction="#goto_mainform" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="btn" text="Customer" textAlignment="CENTER">
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@dashboard.css" />
+               </stylesheets>
+            </Button>
+         </children>
+         <stylesheets>
+            <URL value="@dashboard.css" />
+            <URL value="@style.css" />
+         </stylesheets>
+      </AnchorPane>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" styleClass="pane_111" visible="false">
+         <children>
+            <AnchorPane fx:id="login_form" layoutX="17.0" layoutY="17.0" prefHeight="519.0" prefWidth="295.0">
+               <children>
+                  <FontAwesomeIcon iconName="USER" layoutX="124.0" layoutY="91.0" size="5em">
+                     <selectionFill>
+                        <LinearGradient endX="1.0" endY="0.8815165876777251">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1080000028014183" green="0.5454857349395752" blue="0.8999999761581421" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </selectionFill>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.9715639810426541" startX="0.2559241706161137">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1891999989748001" green="0.625220000743866" blue="0.8600000143051147" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill></FontAwesomeIcon>
+                  <Label layoutX="93.0" layoutY="110.0" stylesheets="@../../../../java/org/example/design/style.css" text="Sign In Account" textFill="#cae4ff">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login_username" layoutX="37.0" layoutY="174.0" prefHeight="34.0" prefWidth="221.0" promptText="Username" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <PasswordField fx:id="login_password" layoutX="37.0" layoutY="227.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <TextField fx:id="login_showPassword" layoutX="37.0" layoutY="227.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" visible="false" />
+                  <CheckBox fx:id="login_selectShowPassword" layoutX="37.0" layoutY="268.0" mnemonicParsing="false" onAction="#showPassword" text="">
+                     <font>
+                        <Font name="FontAwesome Regular" size="12.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7921568751335144" green="0.8941176533699036" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </CheckBox>
+                  <Button fx:id="login_btn" layoutX="37.0" layoutY="315.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Login" />
+                  <Label layoutX="103.0" layoutY="404.0" text="Register Account" textFill="#cae4ff" />
+                  <Button fx:id="login_createAccount" layoutX="37.0" layoutY="434.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Create Account" />
+                  <Hyperlink fx:id="login_forgotPassword" layoutX="156.0" layoutY="265.0" onAction="#switchForm" text="Forgot Password?" textFill="#cae4ff" />
+                  <FontAwesomeIcon glyphStyleClass="" iconName="HOME" layoutX="1.0" layoutY="32.0" size="3em" wrappingWidth="27.0">
+                     <fill>
+                        <LinearGradient endX="0.9431279620853081" endY="0.9099526066350712" startX="0.06161137440758294">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1882352977991104" green="0.6235294342041016" blue="0.8588235378265381" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <selectionFill>
+                        <LinearGradient endX="1.0" endY="0.7203791469194313">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1882352977991104" green="0.6235294342041016" blue="0.8588235378265381" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </selectionFill>
+                  </FontAwesomeIcon>
+                  <Button fx:id="mainPageBtn" layoutX="1.0" layoutY="-3.0" mnemonicParsing="false" onAction="#welcomePage" opacity="0.0" prefHeight="40.0" prefWidth="40.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signup_form" layoutX="17.0" layoutY="17.0" prefHeight="519.0" prefWidth="295.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#579aa1" iconName="USER_PLUS" layoutX="114.0" layoutY="66.0" size="5em" />
+                  <Label layoutX="90.0" layoutY="80.0" stylesheets="@../../../../java/org/example/design/style.css" text="Sign Up Account" textFill="#cae4ff">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signup_answer" layoutX="37.0" layoutY="345.0" prefHeight="34.0" prefWidth="221.0" promptText="Answer" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <TextField fx:id="signup_username" layoutX="37.0" layoutY="154.0" prefHeight="34.0" prefWidth="221.0" promptText="Username" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <PasswordField fx:id="signup_cPassword" layoutX="37.0" layoutY="249.0" prefHeight="34.0" prefWidth="221.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <Button fx:id="signup_btn" layoutX="38.0" layoutY="393.0" mnemonicParsing="false" onAction="#register" prefHeight="34.0" prefWidth="221.0" stylesheets="@../../../../java/org/example/design/style.css" text="Sign Up">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <font>
+                        <Font name="Poppins Regular" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="94.0" layoutY="440.0" text="Sign In Account" textFill="#cae4ff">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="signup_loginAccount" layoutX="37.0" layoutY="469.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Login Account">
+                     <font>
+                        <Font name="Poppins Medium" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="signup_email" layoutX="37.0" layoutY="107.0" prefHeight="34.0" prefWidth="221.0" promptText="Email Address" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <ComboBox fx:id="signup_selectQuestion" layoutX="37.0" layoutY="297.0" prefHeight="34.0" prefWidth="221.0" promptText="Select Question" />
+                  <PasswordField fx:id="signup_password" layoutX="38.0" layoutY="202.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="forgot_form" layoutX="17.0" layoutY="20.0" prefHeight="519.0" prefWidth="295.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#579aa1" iconName="LOCK" layoutX="128.0" layoutY="84.0" size="5em" />
+                  <Label layoutX="89.0" layoutY="103.0" stylesheets="@../../../../java/org/example/design/style.css" text="Forget Password">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8196078538894653" green="0.9058823585510254" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7921568751335144" green="0.8941176533699036" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <TextField fx:id="forgot_answer" layoutX="37.0" layoutY="244.0" prefHeight="34.0" prefWidth="221.0" promptText="Answer" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <Button fx:id="forgot_proceedBtn" layoutX="37.0" layoutY="297.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Proceed" />
+                  <Button fx:id="forgot_backBtn" layoutX="37.0" layoutY="433.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Back" />
+                  <ComboBox fx:id="forgot_selectQuestion" layoutX="37.0" layoutY="191.0" prefHeight="34.0" prefWidth="221.0" promptText="Select Question" />
+                  <TextField fx:id="forgot_username" layoutX="37.0" layoutY="139.0" prefHeight="34.0" prefWidth="221.0" promptText="Username" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changePass_form" layoutX="17.0" layoutY="20.0" prefHeight="519.0" prefWidth="295.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#579aa1" iconName="LOCK" layoutX="128.0" layoutY="84.0" size="5em" />
+                  <Label layoutX="89.0" layoutY="103.0" stylesheets="@../../../../java/org/example/design/style.css" text="Forget Password">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8196078538894653" green="0.9058823585510254" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.800000011920929" green="0.8999999761581421" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Button fx:id="changePass_proceedBtn" layoutX="37.0" layoutY="270.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Change Password" />
+                  <Button fx:id="changePass_backBtn" layoutX="37.0" layoutY="433.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Back" />
+                  <PasswordField fx:id="changePass_password" layoutX="37.0" layoutY="160.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" />
+                  <PasswordField fx:id="changePass_cPassword" layoutX="37.0" layoutY="216.0" prefHeight="34.0" prefWidth="221.0" promptText="Confirm Password" />
+               </children>
+            </AnchorPane>
+         </children>
+         <stylesheets>
+            <URL value="@dashboard.css" />
+            <URL value="@style.css" />
+         </stylesheets>
+      </AnchorPane>
+      <AnchorPane fx:id="main_form1" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane_111" visible="false">
+         <children>
+            <AnchorPane fx:id="login_form1" layoutX="17.0" layoutY="17.0" prefHeight="519.0" prefWidth="295.0">
+               <children>
+                  <FontAwesomeIcon iconName="USER" layoutX="124.0" layoutY="91.0" size="5em">
+                     <selectionFill>
+                        <LinearGradient endX="1.0" endY="0.8815165876777251">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1080000028014183" green="0.5454857349395752" blue="0.8999999761581421" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </selectionFill>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.9715639810426541" startX="0.2559241706161137">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1891999989748001" green="0.625220000743866" blue="0.8600000143051147" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIcon>
+                  <Label layoutX="93.0" layoutY="110.0" stylesheets="@../../../../java/org/example/design/style.css" text="Sign In Account" textFill="#cae4ff">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login_username1" layoutX="37.0" layoutY="174.0" prefHeight="34.0" prefWidth="221.0" promptText="Username" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <PasswordField fx:id="login_password1" layoutX="37.0" layoutY="227.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <TextField fx:id="login_showPassword1" layoutX="37.0" layoutY="227.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" visible="false" />
+                  <CheckBox fx:id="login_selectShowPassword1" layoutX="37.0" layoutY="268.0" mnemonicParsing="false" onAction="#showPassword1" text="">
+                     <font>
+                        <Font name="FontAwesome Regular" size="12.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7921568751335144" green="0.8941176533699036" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </CheckBox>
+                  <Button fx:id="login_btn1" layoutX="37.0" layoutY="315.0" mnemonicParsing="false" onAction="#login1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Login" />
+                  <Label layoutX="103.0" layoutY="404.0" text="Register Account" textFill="#cae4ff" />
+                  <Button fx:id="login_createAccount1" layoutX="37.0" layoutY="434.0" mnemonicParsing="false" onAction="#switchForm1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Create Account" />
+                  <Hyperlink fx:id="login_forgotPassword1" layoutX="156.0" layoutY="265.0" onAction="#switchForm1" text="Forgot Password?" />
+                  <FontAwesomeIcon glyphStyleClass="" iconName="HOME" layoutX="1.0" layoutY="32.0" size="3em" wrappingWidth="27.0">
+                     <fill>
+                        <LinearGradient endX="0.9431279620853081" endY="0.9099526066350712" startX="0.06161137440758294">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1882352977991104" green="0.6235294342041016" blue="0.8588235378265381" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIcon>
+                  <Button fx:id="mainPage_btn1" layoutX="-5.0" layoutY="-1.0" mnemonicParsing="false" onAction="#welcomePage" opacity="0.0" prefHeight="40.0" prefWidth="40.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signup_form1" layoutX="17.0" layoutY="17.0" prefHeight="519.0" prefWidth="295.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#579aa1" iconName="USER_PLUS" layoutX="114.0" layoutY="63.0" size="5em" />
+                  <Label layoutX="90.0" layoutY="77.0" stylesheets="@../../../../java/org/example/design/style.css" text="Sign Up Account" textFill="#cae4ff">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signup_answer1" layoutX="37.0" layoutY="325.0" prefHeight="34.0" prefWidth="221.0" promptText="Answer" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <TextField fx:id="signup_username1" layoutX="37.0" layoutY="147.0" prefHeight="34.0" prefWidth="221.0" promptText="Username" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <PasswordField fx:id="signup_cPassword1" layoutX="37.0" layoutY="234.0" prefHeight="34.0" prefWidth="221.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <Button fx:id="signup_btn1" layoutX="37.0" layoutY="418.0" mnemonicParsing="false" onAction="#register1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Sign Up">
+                     <font>
+                        <Font name="Poppins Regular" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="signup_loginAccount1" layoutX="37.0" layoutY="469.0" mnemonicParsing="false" onAction="#switchForm1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Login Account">
+                     <font>
+                        <Font name="Poppins Medium" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="signup_email1" layoutX="37.0" layoutY="104.0" prefHeight="34.0" prefWidth="221.0" promptText="Email Address" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <ComboBox fx:id="signup_selectQuestion1" layoutX="37.0" layoutY="279.0" prefHeight="34.0" prefWidth="221.0" promptText="Select Question" />
+                  <PasswordField fx:id="signup_password1" layoutX="38.0" layoutY="190.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <ComboBox fx:id="signup_selectQuestion11" layoutX="37.0" layoutY="371.0" prefHeight="34.0" prefWidth="221.0" promptText="Category" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="forgot_form1" layoutX="17.0" layoutY="20.0" prefHeight="519.0" prefWidth="295.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#579aa1" iconName="LOCK" layoutX="128.0" layoutY="84.0" size="5em" />
+                  <Label layoutX="89.0" layoutY="103.0" stylesheets="@../../../../java/org/example/design/style.css" text="Forget Password" textFill="#cae4ff">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="forgot_answer1" layoutX="37.0" layoutY="244.0" prefHeight="34.0" prefWidth="221.0" promptText="Answer" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+                  <Button fx:id="forgot_proceedBtn1" layoutX="37.0" layoutY="297.0" mnemonicParsing="false" onAction="#forgotPassword1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Proceed" />
+                  <Button fx:id="forgot_backBtn1" layoutX="37.0" layoutY="433.0" mnemonicParsing="false" onAction="#switchForm1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Back" />
+                  <ComboBox fx:id="forgot_selectQuestion1" layoutX="37.0" layoutY="191.0" prefHeight="34.0" prefWidth="221.0" promptText="Select Question" />
+                  <TextField fx:id="forgot_username1" layoutX="37.0" layoutY="139.0" prefHeight="34.0" prefWidth="221.0" promptText="Username" styleClass="textfield" stylesheets="@../../../../java/org/example/design/style.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changePass_form1" layoutX="17.0" layoutY="20.0" prefHeight="519.0" prefWidth="295.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#579aa1" iconName="LOCK" layoutX="128.0" layoutY="84.0" size="5em" />
+                  <Label layoutX="89.0" layoutY="103.0" stylesheets="@../../../../java/org/example/design/style.css" text="Forget Password" textFill="#cae4ff">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="changePass_proceedBtn1" layoutX="37.0" layoutY="270.0" mnemonicParsing="false" onAction="#changePassword1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Change Password" />
+                  <Button fx:id="changePass_backBtn1" layoutX="37.0" layoutY="433.0" mnemonicParsing="false" onAction="#switchForm1" prefHeight="34.0" prefWidth="221.0" styleClass="btn" stylesheets="@../../../../java/org/example/design/style.css" text="Back" />
+                  <PasswordField fx:id="changePass_password1" layoutX="37.0" layoutY="160.0" prefHeight="34.0" prefWidth="221.0" promptText="Password" />
+                  <PasswordField fx:id="changePass_cPassword1" layoutX="37.0" layoutY="216.0" prefHeight="34.0" prefWidth="221.0" promptText="Confirm Password" />
+               </children>
+            </AnchorPane>
+         </children>
+         <stylesheets>
+            <URL value="@dashboard.css" />
+            <URL value="@style.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</StackPane>

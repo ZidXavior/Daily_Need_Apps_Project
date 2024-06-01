@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="script.js" defer></script> <!-- Link to the JavaScript file -->
+    <style>
+        #map {position: absolute; top: 0; right: 0; bottom: 50px; left: 0;}
+        .leaflet-bar {
+            width: 180px;
+        }
+        #service-buttons {position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); text-align: center;
+                        background-color: #31363F; border-width: 2px 2px 2px 2px; border-radius: 16px; color: white;
+                        padding: 2px 2px; text-align: center; text-decoration: none; display: inline-block; cursor: pointer;
+        }
+        #service-buttons button {margin: 5px;}
+        #service-buttons button:hover { cursor: pointer;}
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<div id="service-buttons">
+    <button onclick="togglePlaceMarkerMode()">Place Marker</button>
+    <button onclick="deleteMarkers()">Delete Marker</button>
+    <button onclick="requestService()">Request Service</button>
+    <button onclick="cancelService()">Service Completed</button>
+</div>
+</body>
+</html>

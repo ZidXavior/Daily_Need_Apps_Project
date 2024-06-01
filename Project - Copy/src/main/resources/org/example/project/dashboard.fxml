@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="519.0" prefWidth="795.0" style="-fx-background-color: #DDDDDD;" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project.DashboardController">
+   <children>
+      <VBox prefHeight="519.0" prefWidth="230.0" styleClass="white-bg" stylesheets="@../../../../java/org/example/design/dashboard.css" />
+      <AnchorPane prefHeight="519.0" prefWidth="230.0" styleClass="pane_111" stylesheets="@../../../../java/org/example/design/dashboard.css">
+         <children>
+            <ImageView fx:id="logo_img" fitHeight="135.0" fitWidth="163.0" layoutX="44.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" styleClass="pane_111">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="features_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="226.0" mnemonicParsing="false" onAction="#show_features" prefHeight="33.0" prefWidth="230.0" styleClass="pane_11" stylesheets="@../../../../java/org/example/design/dashboard.css" text="Features" textFill="#67c6e3">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+               <graphic>
+                  <ImageView fx:id="features_img" fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/application.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settings_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="259.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="230.0" styleClass="pane_11" stylesheets="@../../../../java/org/example/design/dashboard.css" text="Settings">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+               <graphic>
+                  <ImageView fx:id="settings_img" fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logout_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="292.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="230.0" styleClass="pane_11" stylesheets="@../../../../java/org/example/design/dashboard.css" text="Logout">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+               <graphic>
+                  <ImageView fx:id="logout_img" fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/power-off.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="dashboard_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="193.0" mnemonicParsing="false" onAction="#show_dashboard" prefHeight="33.0" prefWidth="230.0" styleClass="pane_11" stylesheets="@../../../../java/org/example/design/dashboard.css" text="Dashboard" textFill="#67c6e3">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+               <graphic>
+                  <ImageView fx:id="dashboard_img" fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_details_24px_3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="dashboard_pane" layoutX="232.0" prefHeight="519.0" prefWidth="625.0" styleClass="white-bg" stylesheets="@../../../../java/org/example/design/dashboard.css">
+         <children>
+            <Pane fx:id="user_info" layoutX="29.0" layoutY="93.0" prefHeight="228.0" prefWidth="344.0" styleClass="pane_1111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fx:id="user_img" fitHeight="78.0" fitWidth="86.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/profile.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="14.0" layoutY="114.0" prefHeight="94.0" prefWidth="341.0">
+                     <children>
+                        <Label fx:id="label_name" prefHeight="23.0" prefWidth="109.0" text="User Name" textFill="#9cafaa" />
+                        <Label fx:id="label_phone" layoutX="10.0" layoutY="10.0" prefHeight="23.0" prefWidth="109.0" text="Phone" textFill="#9cafaa" />
+                        <Label fx:id="label_email" layoutX="10.0" layoutY="33.0" prefHeight="22.0" prefWidth="343.0" text="E-mail" textFill="#9cafaa" />
+                        <Label fx:id="label_address" layoutX="10.0" layoutY="56.0" prefHeight="22.0" prefWidth="330.0" text="Address" textFill="#9cafaa" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="search_bar" prefHeight="78.0" prefWidth="628.0">
+               <children>
+                  <MenuButton fx:id="menu" layoutX="545.0" layoutY="29.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="30.0" styleClass="pane_1111" text="MenuButton">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#update_acc" text="Update Account" />
+                      <MenuItem mnemonicParsing="false" text="Settings" />
+                    </items>
+                  </MenuButton>
+                  <TextField layoutX="359.0" layoutY="29.0" prefHeight="30.0" prefWidth="160.0" promptText="Search" style="-fx-background-radius: 20 20 20 20;" stylesheets="@dashboard.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="364.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/search.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="41.0" layoutY="30.0" prefHeight="30.0" prefWidth="160.0" text="Dashboard">
+                     <font>
+                        <Font name="Poppins Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="user_icon" disable="true" fitHeight="26.0" fitWidth="30.0" layoutX="553.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="398.0" layoutY="93.0" prefHeight="308.0" prefWidth="187.0" styleClass="pane_11111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="86.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/to-do-list.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="99.0" text="Your tasks for today" />
+                  <TextArea fx:id="dashboard_todo" disable="true" editable="false" layoutX="14.0" layoutY="122.0" opacity="0.8" prefHeight="167.0" prefWidth="160.0" style="-fx-background-color: #DFF5FF;" styleClass="pane_110" stylesheets="@dashboard.css" text="&#10;&#10;" />
+               </children>
+            </Pane>
+            <Pane layoutX="29.0" layoutY="333.0" prefHeight="149.0" prefWidth="344.0" styleClass="pane_11" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="7.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/man.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/message.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="37.0" prefHeight="17.0" prefWidth="80.0" text="Call for service">
+                     <font>
+                        <Font name="Montserrat Bold" size="9.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="135.0" fitWidth="171.0" layoutX="159.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Screenshot%202024-03-20%20201940.png" />
+                     </image></ImageView>
+                  <Button fx:id="serviceLink_btn" layoutX="62.0" layoutY="18.0" mnemonicParsing="false" opacity="0.0" prefHeight="52.0" prefWidth="78.0" text="Button" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="552.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/chat.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="499.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/instagram%20(1).png" />
+               </image></ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="446.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/facebook.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="features_pane" layoutX="233.0" prefHeight="519.0" prefWidth="625.0" styleClass="white-bg" stylesheets="@../../../../java/org/example/design/dashboard.css" visible="false">
+         <children>
+            <Pane prefHeight="78.0" prefWidth="628.0">
+               <children>
+                  <MenuButton fx:id="menu1" layoutX="544.0" layoutY="29.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="30.0" styleClass="pane_1111" text="MenuButton">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#update_acc" text="Update Account" />
+                        <MenuItem mnemonicParsing="false" text="Settings" />
+                     </items>
+                  </MenuButton>
+                  <TextField layoutX="358.0" layoutY="29.0" prefHeight="30.0" prefWidth="160.0" promptText="Search" style="-fx-background-radius: 20 20 20 20;" stylesheets="@dashboard.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="363.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/search.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="43.0" layoutY="30.0" prefHeight="30.0" prefWidth="160.0" text="Features">
+                     <font>
+                        <Font name="Poppins Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView disable="true" fitHeight="26.0" fitWidth="30.0" layoutX="552.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="43.0" layoutY="120.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/alarm.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="emergency_services" mnemonicParsing="false" onAction="#emergency_services" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 20; -fx-border-radius: 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="189.0" layoutY="120.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/pay.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="pay_bills" mnemonicParsing="false" onAction="#pay_bills" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DDDDDD; -fx-border-radius: 20 20 20 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="335.0" layoutY="120.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/hand%20(1).png" />
+                     </image></ImageView>
+                  <Button fx:id="service_providers" layoutX="-1.0" mnemonicParsing="false" onAction="#service_providers" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DDDDDD; -fx-border-radius: 20 20 20 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="480.0" layoutY="120.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/budget.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="expense_calculator" mnemonicParsing="false" onAction="#expense_calculator" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DDDDDD; -fx-border-radius: 20 20 20 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="43.0" layoutY="285.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/payment.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="tickets" layoutX="-1.0" mnemonicParsing="false" onAction="#tickets" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DDDDDD; -fx-border-radius: 20 20 20 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="189.0" layoutY="285.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/to-do-list.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="to_do_list" mnemonicParsing="false" onAction="#to_do_list" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DDDDDD; -fx-border-radius: 20 20 20 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="335.0" layoutY="285.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/vehicle.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="car_rent" mnemonicParsing="false" onAction="#car_rent" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #DDDDDD; -fx-border-radius: 20 20 20 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="480.0" layoutY="285.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane_111111" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather-app.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="weather" mnemonicParsing="false" onAction="#weather" opacity="0.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-background-color: #DDDDDD; -fx-border-radius: 20;" styleClass="button2" stylesheets="@dashboard.css" text="Button" />
+               </children>
+            </Pane>
+            <Label layoutX="41.0" layoutY="231.0" text="Emergency Services" />
+            <Label layoutX="217.0" layoutY="231.0" text="Pay Bills" />
+            <Label layoutX="340.0" layoutY="231.0" text="Service Providers" />
+            <Label layoutX="480.0" layoutY="231.0" text="Expense Calculator" />
+            <Label layoutX="75.0" layoutY="395.0" text="Tickets" />
+            <Label layoutX="211.0" layoutY="395.0" text="To-Do List" />
+            <Label layoutX="362.0" layoutY="395.0" text="Car Rent" />
+            <Label layoutX="484.0" layoutY="395.0" text="Weather Forecast" />
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="551.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/chat.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="498.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/instagram%20(1).png" />
+               </image></ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="445.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/facebook.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="settings_pane" layoutX="233.0" prefHeight="519.0" prefWidth="625.0" styleClass="white-bg" stylesheets="@../../../../java/org/example/design/dashboard.css" visible="false">
+         <children>
+            <Pane prefHeight="78.0" prefWidth="628.0">
+               <children>
+                  <MenuButton fx:id="menu11" layoutX="544.0" layoutY="29.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="30.0" styleClass="pane_1111" text="MenuButton">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Update Account" />
+                        <MenuItem mnemonicParsing="false" text="Settings" />
+                     </items>
+                  </MenuButton>
+                  <TextField layoutX="358.0" layoutY="29.0" prefHeight="30.0" prefWidth="160.0" promptText="Search" style="-fx-background-radius: 20 20 20 20;" stylesheets="@dashboard.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="363.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/search.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="43.0" layoutY="30.0" prefHeight="32.0" prefWidth="194.0" text="Update Account">
+                     <font>
+                        <Font name="Poppins Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView disable="true" fitHeight="26.0" fitWidth="30.0" layoutX="552.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="551.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/chat.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="498.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/instagram%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="445.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/facebook.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="31.0" layoutY="122.0" prefHeight="320.0" prefWidth="473.0" styleClass="pane_1111111">
+               <children>
+                  <TextField fx:id="name" layoutX="14.0" layoutY="33.0" prefHeight="32.0" promptText="Name" styleClass="pane_111111" />
+                  <TextField fx:id="phone" layoutX="282.0" layoutY="33.0" prefHeight="32.0" promptText="Phone" styleClass="pane_111111" />
+                  <TextField fx:id="email" layoutX="14.0" layoutY="109.0" prefHeight="32.0" prefWidth="262.0" promptText="Email" styleClass="pane_111111" />
+                  <TextField fx:id="address" layoutX="14.0" layoutY="182.0" prefHeight="32.0" prefWidth="424.0" promptText="Address" styleClass="pane_111111" />
+                  <Button layoutX="14.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_info" prefHeight="32.0" prefWidth="61.0" styleClass="pane_11111" text="Update">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="todo_pane" layoutX="233.0" prefHeight="519.0" prefWidth="625.0" styleClass="white-bg" stylesheets="@../../../../java/org/example/design/dashboard.css" visible="false">
+         <children>
+            <Pane prefHeight="78.0" prefWidth="628.0">
+               <children>
+                  <MenuButton fx:id="menu111" layoutX="544.0" layoutY="29.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="30.0" styleClass="pane_1111" text="MenuButton">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Update Account" />
+                        <MenuItem mnemonicParsing="false" text="Settings" />
+                     </items>
+                  </MenuButton>
+                  <TextField layoutX="358.0" layoutY="29.0" prefHeight="30.0" prefWidth="160.0" promptText="Search" style="-fx-background-radius: 20 20 20 20;" stylesheets="@dashboard.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="363.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/search.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="43.0" layoutY="30.0" prefHeight="32.0" prefWidth="194.0" text="Set To-Do List">
+                     <font>
+                        <Font name="Poppins Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView disable="true" fitHeight="26.0" fitWidth="30.0" layoutX="552.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="551.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/chat.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="498.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/instagram%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="445.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/facebook.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="31.0" layoutY="122.0" prefHeight="320.0" prefWidth="446.0" styleClass="pane_1111111">
+               <children>
+                  <Button layoutX="343.0" layoutY="265.0" mnemonicParsing="false" onAction="#set_todo" prefHeight="32.0" prefWidth="61.0" styleClass="pane_11111" text="Update">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="14.0" layoutY="6.0" prefHeight="308.0" prefWidth="187.0" styleClass="pane_11111" stylesheets="@dashboard.css">
+                     <children>
+                        <ImageView fitHeight="78.0" fitWidth="86.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/to-do-list.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="99.0" text="Your tasks for today" />
+                        <TextArea fx:id="todo_list" layoutX="14.0" layoutY="122.0" opacity="0.8" prefHeight="167.0" prefWidth="160.0" style="-fx-background-color: #DFF5FF;" styleClass="pane_110" stylesheets="@dashboard.css" text="&#10;" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="243.0" layoutY="265.0" mnemonicParsing="false" onAction="#clear_todo" prefHeight="32.0" prefWidth="61.0" styleClass="pane_11111" text="Clear">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
